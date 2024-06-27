@@ -63,8 +63,8 @@ return [
 
         'null' => [
             'driver' => 'null',
-        ],
+        ],
 
-    ],
+    ],
 
 ];

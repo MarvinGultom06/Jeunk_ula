@@ -78,18 +78,18 @@
             tableBody.innerHTML += row;
         });
 
-        document.querySelector('.subtotal').textContent = Subtotal: ${formatRupiah(subtotal)};
+        document.querySelector('.subtotal').textContent = `Subtotal: ${formatRupiah(subtotal)}`;
     }
 
     function incrementQuantity(itemId) {
-        const input = document.getElementById(quantity-${itemId});
+        const input = document.getElementById(`quantity-${itemId}`);
         let quantity = parseInt(input.value);
         quantity++;
         updateCartItem(itemId, quantity);
     }
 
     function decrementQuantity(itemId) {
-        const input = document.getElementById(quantity-${itemId});
+        const input = document.getElementById(`quantity-${itemId}`);
         let quantity = parseInt(input.value);
         if (quantity > 1) {
             quantity--;
@@ -100,7 +100,7 @@
     }
 
     function updateCartItem(itemId, newQuantity) {
-        fetch(/api/cart/update/${itemId}, {
+        fetch(`/api/cart/update/${itemId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -118,7 +118,7 @@
     }
 
     function removeFromCart(itemId) {
-        fetch(/api/cart/remove/${itemId}, {
+        fetch(`/api/cart/remove/${itemId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

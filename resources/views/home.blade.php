@@ -120,11 +120,11 @@
     }
 
     function addToCart(productId, initialQuantity) {
-        const addButton = document.getElementById(add-button-${productId});
-        const quantityInput = document.getElementById(quantity-${productId});
-        const quantityInputContainer = document.getElementById(quantity-input-${productId});
+        const addButton = document.getElementById(`add-button-${productId}`);
+        const quantityInput = document.getElementById(`quantity-${productId}`);
+        const quantityInputContainer = document.getElementById(`quantity-input-${productId}`);
 
-        fetch(/api/cart/add/${productId}, {
+        fetch(`/api/cart/add/${productId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -146,7 +146,7 @@
     }
 
     function incrementQuantity(productId) {
-        const quantityInput = document.getElementById(quantity-${productId});
+        const quantityInput = document.getElementById(`quantity-${productId}`);
         let quantity = parseInt(quantityInput.value);
         quantity++;
         quantityInput.value = quantity;
@@ -154,7 +154,7 @@
     }
 
     function decrementQuantity(productId) {
-        const quantityInput = document.getElementById(quantity-${productId});
+        const quantityInput = document.getElementById(`quantity-${productId}`);
         let quantity = parseInt(quantityInput.value);
         if (quantity > 1) {
             quantity--;
@@ -166,7 +166,7 @@
     }
 
     function removeFromCart(productId) {
-        fetch(/api/cart/remove/product/${productId}, {
+        fetch(`/api/cart/remove/product/${productId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -175,8 +175,8 @@
             })
             .then(response => response.json())
             .then(data => {
-                const addButton = document.getElementById(add-button-${productId});
-                const quantityInputContainer = document.getElementById(quantity-input-${productId});
+                const addButton = document.getElementById(`add-button-${productId}`);
+                const quantityInputContainer = document.getElementById(`quantity-input-${productId}`);
                 addButton.style.display = 'block';
                 quantityInputContainer.classList.add('hidden');
             })
