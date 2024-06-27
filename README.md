@@ -1,10 +1,10 @@
 <p>Guide To PgAdmin4</p>
-<p>DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=jeunk_ula
-DB_USERNAME=postgres
-DB_PASSWORD=devjavu123</p>
+<p>DB_CONNECTION=pgsql</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=5432</p>
+<p>DB_DATABASE=jeunk_ula</p>
+<p>DB_USERNAME=postgres</p>
+<p>DB_PASSWORD=devjavu123</p>
 
 
 
