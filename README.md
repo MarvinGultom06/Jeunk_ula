@@ -1,3 +1,11 @@
+<p>Kelompok 12</p>
+<p>Marvin Gultom -535220198</p>
+<p>Saskia Lavinsky -535220176</p>
+<p>Shannon Andrea -535220204</p>
+<p>Nashwa Sawitri Dewayani -535220220</p>
+
+
+
 <p>Guide To PgAdmin4</p>
 <p>DB_CONNECTION=pgsql</p>
 <p>DB_HOST=127.0.0.1</p>
